@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
 
-  proxy:
+  revers-proxy:
     image: jwilder/nginx-proxy
     ports:
       - 80:80
@@ -14,4 +14,4 @@ services:
 
 networks:
   proxy:
-    driver: bridge
+    external: true
