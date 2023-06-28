@@ -1,0 +1,33 @@
+<?php
+
+include("config.php");
+$db_link = mysql_connect($db["host"], $db["user"], $db["pass"]);
+mysql_select_db($db["name"], $db_link);
+
+mysql_query("DELETE FROM `news`");
+mysql_query("DELETE FROM `users`");
+mysql_query("DELETE FROM `comments`");
+
+//mysql_query("CREATE TABLE `news` (`id` INT NOT NULL AUTO_INCREMENT,`small_text` TEXT NULL,`full_text` TEXT NULL, PRIMARY KEY (`id`))");
+//mysql_query("CREATE TABLE `comments` (`id` INT NOT NULL AUTO_INCREMENT,`news_id` INT NULL,`comment` TEXT NULL,`name` TEXT NULL, PRIMARY KEY (`id`))");
+//mysql_query("CREATE TABLE  `users` (`id` INT NOT NULL AUTO_INCREMENT,`login` TEXT NOT NULL,`password` TEXT NOT NULL, PRIMARY KEY (`id`)););");
+
+mysql_query("INSERT INTO `users` (`id`, `login`, `password`) VALUES (1, 'user01','P@ssw0rd'),(2, 'user02','P@ssw0rd'),(3, 'user03','P@ssw0rd'),(4, 'user04','P@ssw0rd'),(5, 'user05','P@ssw0rd'),(6, 'user06','P@ssw0rd'),(7, 'user07','P@ssw0rd'),(8, 'user08','P@ssw0rd'),(9, 'user09','P@ssw0rd'),(10, 'user10','P@ssw0rd'),(11, 'user11','P@ssw0rd'),(12, 'user12','P@ssw0rd'),(13, 'user13','P@ssw0rd'),(14, 'user14','P@ssw0rd'),(15, 'user15','P@ssw0rd'),(16, 'admin', 'qwerty');");
+
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('1', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user01');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('2', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user02');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('3', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user03');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('4', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user04');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('5', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user05');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('6', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user06');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('7', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user07');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('8', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user08');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('9', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user09');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('10', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user10');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('11', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user11');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('12', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user12');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('13', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user13');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('14', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user14');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('15', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','user15');");
+mysql_query("INSERT INTO `news` (`id`, `small_text`, `full_text`,`author`) VALUES ('16', 'A generic news sample to demonstrate various attacks on neighboring sites.', 'A generic news sample to demonstrate various attacks on neighboring sites.','admin');");
+?>
