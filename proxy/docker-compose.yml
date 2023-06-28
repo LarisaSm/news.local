@@ -2,7 +2,7 @@ version: '3.0'
 
 services:
 
-  revers-proxy:
+  reverse-proxy:
     image: jwilder/nginx-proxy
     container_name: "reverse-proxy"
     volumes:
