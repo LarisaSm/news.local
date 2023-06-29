@@ -14,3 +14,7 @@
 4. docker run --name vulnbank --network proxy -e VIRTUAL_HOST="vulnbank.local" -p 8080:80 -d vulnbank/vulnbank
 5. docker-compose up -d
 6. прописать в файле hosts "127.0.0.1 news.local vulnbank.local" 
+
+
+
+*Код сайта news.local и докер с сайтом vulnbank любезно предоставлены Positive Technologies для изучения PTAF
